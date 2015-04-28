@@ -47,8 +47,6 @@ function wppp_render_paypal_button_with_other_amt($args)
 		$output .= '<div class="wp_pp_button_reference_section">';
 		$output .= '<label for="wp_pp_button_reference">'.$reference.'</label>';
 		$output .= '<br />';
-		$output .= '<input type="hidden" name="on0" value="Reference" />';
-		$output .= '<input type="text" name="os0" value="" class="wp_pp_button_reference" />';
 		$output .= '</div>';
 	}
 			
@@ -88,7 +86,6 @@ function wppp_render_paypal_button_form($args)
 		'currency' => 'USD',
 		'options' => 'Payment for Service 1:15.50|Payment for Service 2:30.00|Payment for Service 3:47.00',
 		'return' => site_url(),
-		'reference' => 'Your Email Address',
 		'other_amount' => '',
 		'country_code' => '',
 		'payment_subject' => '',
@@ -139,16 +136,13 @@ function wppp_render_paypal_button_form($args)
                 if(!empty($reference)){
                     echo '<div class="wp_pp_button_reference_section">';
                     echo '<label for="wp_pp_button_reference">'.$reference.'</label>';
-                    echo '<br />';
-                    echo '<input type="hidden" name="on0" value="Reference" />';
-                    echo '<input type="text" name="os0" value="" class="wp_pp_button_reference" />';
                     echo '</div>';
                 }
 
 		if(!empty($payment_subject)){
 		?>
-		<input type="hidden" name="on1" value="Payment Subject" />
-		<input type="hidden" name="os1" value="<?php echo $payment_subject; ?>" />
+		<input type="hidden" name="on0" value="Payment Subject" />
+		<input type="hidden" name="os0" value="<?php echo $payment_subject; ?>" />
 		<?php } ?>
 		
 		<input type="hidden" name="cmd" value="_xclick">
