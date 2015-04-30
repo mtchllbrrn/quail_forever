@@ -14,3 +14,4 @@ wp-content/backups/
 sitemap.xml
 sitemap.xml.gz
 .DS_Store
+*.swp
