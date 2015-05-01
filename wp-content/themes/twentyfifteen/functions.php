@@ -587,7 +587,7 @@ class GWRequireListColumns {
 //new GWRequireListColumns();
  
 // apply to all list fields on a specific form
-new GWRequireListColumns(4);
+//new GWRequireListColumns(4);
  
 // apply to specific list field on a specific form
 # new GWRequireListColumns(4, 2);
@@ -603,3 +603,9 @@ new GWAutoListFieldRows( array(
     'list_field_id' => 1,
     'input_html_id' => '#ginput_quantity_4_2'
 ) );
+
+// Require all columns on Single-Shooter Tickets
+new GWRequireListColumns(4);
+
+// Require all columns on Team Tickets
+new GWRequireListColumns(5);
