@@ -392,3 +392,9 @@ new GWRequireListColumns(4);
 
 // Require all columns on Team Tickets
 new GWRequireListColumns(5);
+
+// Make list-field column a dropdown rather than single-line text input
+add_filter("gform_column_input_4_1_2", "set_column", 10, 5); // for single-shooter ticket form
+function set_column($input_info, $field, $column, $value, $form_id){
+    return array("type" => "select", "choices" => "A, B, C, D");
+}
