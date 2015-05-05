@@ -1,0 +1,10 @@
+/*
+ * Theme Name: Origami Child
+ * Description: Origami customizations for Quail Forever.
+ * Author: Mitchell Barron 
+ * Template: origami
+ * */
+
+#searchform {
+    display: none;
+}
